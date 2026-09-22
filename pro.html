@@ -260,7 +260,11 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 .dev.sel{background:var(--accentSoft)}
 .dev .sev{width:4px;align-self:stretch;border-radius:2px;min-height:30px}
 .dev .nm{font-size:13px;font-weight:500;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.dev .meta{font-size:11px;color:var(--ink3);line-height:1.4;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dev .meta{
+  font-size:11px;color:var(--ink3);line-height:1.4;overflow:hidden;
+  /* Zigbee 다홉 경로(A → B → 허브)가 한 줄 말줄임에 잘려서 두 줄까지 편다 */
+  display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;
+}
 .dev .rd{text-align:right;flex:none}
 .dev .rd b{display:block;font-family:"IBM Plex Mono",monospace;font-size:15px;font-weight:600;letter-spacing:-.02em}
 .dev .rd .big{font-size:12.5px;font-weight:600}
